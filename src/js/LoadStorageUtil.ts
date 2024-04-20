@@ -1,4 +1,4 @@
-import { Task } from "./ToDo";
+import { Task } from "./Task";
 
 export class LocalStorageUtil {
     static saveTasks(tasks: Task[]) {

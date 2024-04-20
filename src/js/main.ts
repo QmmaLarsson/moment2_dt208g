@@ -1,3 +1,6 @@
+import { Task } from "./Task";
+import { TaskManager } from "./TaskManager";
+
 //Händelselyssnare som körs när allt DOM-innehåll har laddats
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("form")! as HTMLFormElement;

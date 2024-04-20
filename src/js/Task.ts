@@ -1,7 +1,7 @@
-//Importera gränssnitt från IToDo.ts
-import { ITask } from "./IToDo";
+//Importera gränssnitt från Task.ts
+import { ITask } from "./ITask";
 
-//Skapa en klass som implementerar gränssnittet
+//En klass som implementerar gränssnittet
 export class Task implements ITask {
     task: string;
     priority: number;
