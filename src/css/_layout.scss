@@ -1,2 +1,61 @@
 @use "base";
 @use "component";
+
+html {
+    //62,5% av 16px ger 10px
+    font-size: 62.5%;
+}
+
+body {
+    min-height: 100vh;
+    //Textstorlek 16px som standard
+    font-size: base.$main-fontsize;
+    font-family: base.$font-stack;
+    line-height: 1.5;
+    margin: 0;
+    background: linear-gradient(0deg, base.$primary-bg1, base.$primary-bg2);
+}
+
+h1 {
+    //Textstorlek 32px som standard
+    @include component.heading-size(1);
+    @extend .h;
+}
+
+h2 {
+    //Textstorlek 24 som standard
+    @include component.heading-size(2);
+    @extend .h;
+}
+
+main {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+}
+
+form {
+    @extend .box;
+
+    input {
+        width: 95%;
+        padding: 5px;
+    }
+
+    select {
+        padding: 5px
+    }
+}
+
+button {
+    @extend .button;
+}
+
+ul {
+    list-style: none;
+    @extend .box;
+}
+
+#toDoList2 .completeBtn {
+    display: none;
+}

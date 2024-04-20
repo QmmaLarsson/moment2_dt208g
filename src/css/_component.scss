@@ -1,1 +1,63 @@
 @use "base";
+
+//Regler för rubriker
+@mixin heading-size ($size) {
+    @if $size ==1 {
+        /*Textstorlek 32px som standard*/
+        font-size: 3.2rem;
+    }
+
+    @else if $size ==2 {
+        /*Textstorlek 24 som standard*/
+        font-size: 2.4rem;
+    }
+
+    @else {
+        /*Textstorlek 20px som standard*/
+        font-size: 2rem;
+    }
+}
+
+.h {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//Regler för knappar
+.button {
+    font-size: base.$main-fontsize;
+    font-family: base.$font-stack;
+    cursor: pointer;
+    background: base.$primary-bg1;
+    color: base.$white;
+    padding: 10px;
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    box-shadow: base.$primary-shadow;
+    transition: transform .2s;
+}
+
+.button:hover {
+transform: scale(1.2);
+}
+
+//Regler för containers
+.box {
+    background-color: base.$white;
+    box-shadow: base.$primary-shadow;
+    padding: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-bottom: 20px;
+}
+
+//Regler för skärmstorlekar med en maxbredd på 900px
+@media screen and (max-width: 900px) {
+    .box {
+        margin-left: 10%;
+        margin-right: 10%;
+    }  
+}
