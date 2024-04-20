@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startsida</title>
-    <link rel="stylesheet" href="css/main.scss">
-    <script src="js/main.ts" type="module"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startsida</title>
+  <link rel="stylesheet" href="css/main.scss">
+  <script src="js/main.ts" type="module"></script>
 </head>
+
 <body>
-  <h1>Test</h1>  
+  <main>
+    <h1>Att göra-lista</h1>
+
+    <form id="form">
+      <input type="text" id="formText" name="formText">
+      <button type="submit">Lägg till</button>
+    </form>
+
+    <ul id="toDoList"></ul>
+  </main>
 </body>
+
 </html>
