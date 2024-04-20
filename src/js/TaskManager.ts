@@ -1,5 +1,5 @@
 import { Task } from "./Task";
-import { LocalStorageUtil } from "./LoadStorageUtil";
+import { LocalStorageUtil } from "./LocalStorageUtil";
 
 export class TaskManager {
     private tasks: Task[] = [];
@@ -16,7 +16,7 @@ export class TaskManager {
 
 
     //Tar bort en uppgift från "Att göra"-listan och sparar till localStorage
-    public delteTask(index: number): void {
+    public deleteTask(index: number): void {
         this.tasks.splice(index, 1);
         LocalStorageUtil.saveTasks(this.tasks);
     }
