@@ -1,6 +1,5 @@
 import { Task } from "./Task";
 import { TaskManager } from "./TaskManager";
-import { LocalStorageUtil } from "./LocalStorageUtil";
 
 //Händelselyssnare som körs när allt DOM-innehåll har laddats
 document.addEventListener("DOMContentLoaded", () => {
@@ -62,7 +61,7 @@ function renderTasks(): void {
             const completeBtn = document.createElement("button");
             completeBtn.textContent = "Klar";
             completeBtn.className = "completeBtn";
-            completeBtn.addEventListener("click", () => completeTask(task));
+            completeBtn.addEventListener("click", () => completeTask(index));
             li.appendChild(completeBtn);
 
             //Knapp för att ta bort uppgift
@@ -80,15 +79,13 @@ function renderTasks(): void {
             }
         });
     }
-    LocalStorageUtil.saveTasks(manager.getTasks());
 }
 
 //Funktion för att klarmarkera uppgift
-function completeTask(task: Task): void {
-    task.completed = !task.completed;
-
+function completeTask(index: number): void {
+    //Skickar in index till completeTask i TaskManager
+    manager.completeTask(index);
     renderTasks();
-    LocalStorageUtil.saveTasks(manager.getTasks());
 }
 
 //Funktion för att ta bort en uppgift

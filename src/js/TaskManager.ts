@@ -14,6 +14,12 @@ export class TaskManager {
         LocalStorageUtil.saveTasks(this.tasks);
     }
 
+    //Uppdaterar en uppgifts status från false till true och sparar till localStorage
+    public completeTask(index: number): void {
+        this.tasks[index].completed = true;
+        LocalStorageUtil.saveTasks(this.tasks);
+    }
+
 
     //Tar bort en uppgift från "Att göra"-listan och sparar till localStorage
     public deleteTask(index: number): void {
