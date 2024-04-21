@@ -18,13 +18,13 @@ Första steget var att skapa ett Interface. Ett interface är ett kontrakt för 
 Andra steget var att skapa olika klasser som använder sig av det tidigare skapade interfacet. De klasser som har skapats är följande:
 * Task (Innehåller en konstruktor för att skapa och initiera objekt.)
 * LocalStorageUtil (Innehåller en metod för att hämta information från localStorage och en metod för att spara information till localStorage.)
-* TaskManager (Hanterar uppgifter från ”Att göra”-listan. Innehåller metoder för att hämta uppgifter, lägga till nya uppgifter och ta bort uppgifter. TaskManager har även en instans av ”LocalStorageUtil” för att kunna interagera med localStorage och hämta sparad information samt spara de förändringar som görs.)
+* TaskManager (Hanterar uppgifter från ”Att göra”-listan. Innehåller metoder för att hämta uppgifter, lägga till nya uppgifter klarmarkera uppgifter och ta bort uppgifter. TaskManager har även en instans av ”LocalStorageUtil” för att kunna interagera med localStorage och hämta sparad information samt spara de förändringar som görs.)
 
 **Steg 3:**\
 Tredje steget var att hantera användarinteraktion på webbsidan. De funktioner som har skapats för detta är följande:
 * addToDo() (Läser in information från formuläret och skapar en ny uppgift som skickas till addTask i TaskManager.)
-* renderTask() (Hämtar uppgifterna med hjälp av getTask i TaskManager. Sorterar uppgifterna efter prioritet, skapar HTML-element för varje uppgift, placerar HTML-elementen i olika listor beroende på status samt sparar uppgifterna till localStorage.)
-* completeTask() (Omvandlar en uppgifts status från false till true, det vill säga från icke klar till klar och sparar informationen till localStorage.)
+* renderTask() (Hämtar uppgifterna med hjälp av getTask i TaskManager. Sorterar uppgifterna efter prioritet, skapar HTML-element för varje uppgift samt placerar HTML-elementen i olika listor beroende på status.)
+* completeTask() (Information skickas till completeTask i TaskManager som omvandlar uppgiftens status från false till true, det vill säga från icke klar till klar.)
 * deleteTask() (Information skickas till deleteTask i TaskManager som tar bort uppgiften.)
 
 **Steg 4:**\
